@@ -1,38 +1,439 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  font-family:  "Montserrat", sans-serif;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  width: 100%;
+  min-height: 88px;
+  margin: 0 auto;
+  margin-top: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav_links{
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.nav_links>img{
+  border-radius: 50%;
+}
+
+.nav_icons{
+  display: flex;
+  gap:  0 40px;
+  margin-left: 48px;
+}
+
+.hero{
+  background-image: url("./images/hero.png");
+  width: 100%;
+  min-height: 660px;
+  display: flex;
+  align-items: end;
+}
+
+.hero_title{
+  max-width: 540px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 165px;
+  margin-bottom: 36px;
+  border-radius: 12px;
+  padding: 48px;
+
+}
+
+.hero_title>h2{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.4px;
+
+}
+
+.hero_author{
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  margin-top: 18px;
+}
+
+.articles{
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.article_cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 40px;
+}
+
+.article_card{
+  max-width: 354px;
+  width: 100%;
+  min-height: 456px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.article_card>p{
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  line-height: 30px;
+  font-weight: 700;
+  color: #212121;
+  margin-top: 16px;
+}
+
+.avatarka{
+  border-radius: 50%;
+}
+
+.article_card small{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #52647C;
+  margin: 8px 0;
+}
+
+.article_author{
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.iph{
+  max-width: 354px;
+  width: 100%;
+  min-height: 294px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.articles>b{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #212121;
+  font-family: Montserrat, sans-serif;
+  border-bottom: 1px solid #EAEAEA;
+  display: block;
+  padding-bottom: 24px;
+}
+
+.take{
+  max-width: 1110px;
+  width: 100%;
+  background-image: url(./images/Group\ 3.png);
+  min-height: 375px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  align-items: end;
+}
+
+.take_title{
+  max-width: 326px;
+  width: 100%;
+  min-height: 166px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 64px;
+  margin-bottom: 64px;
+  gap: 16px 0;
+}
+
+.take_title>a{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  padding: 4px 24px;
+  background-color: #0D6EFD;
+  text-decoration: none;
+  max-width: 112px;
+}
+
+.take_title>b{
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.travel{
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.travel>b{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #212121;
+  font-family: Montserrat, sans-serif;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EAEAEA;
+  display: block;
+}
+
+.travel_cards{
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  gap:  56px 0;
+}
+
+.travel_card{
+  display: flex;
+  gap: 0 32px;
+}
+
+.travel_card b{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  color: #212121;
+  font-family: Montserrat, sans-serif;
+}
+
+.travel_card small{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #52647C;
+  margin: 16px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tr_title{
+  margin-top: 28px;
+  max-width: 550px;
+}
+
+.tr_link{
+  max-width: 272px;
+  width: 100%;
+  min-height: 64px;
+  background-color: #0D6EFD;
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: Montserrat, sans-serif;
+  border-radius: 3px;
+}
+
+.inbox{
+  max-width: 1110px;
+  width: 100%;
+  min-height: 354px;
+  background-image: url(./images/inbox.png);
+  border-radius: 12px;
+  margin:80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inbox_title{
+  max-width: 426px;
+  width: 100%;
+  min-height: 200px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inbox_title>b{
+  display: block;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #fff;
+  font-family: Montserrat,sans-serif;
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inbox_input{
+  max-width: 300px;
+  width: 100%;
+  min-height: 48px;
+  text-indent: 20px;
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inbox_btn{
+  max-width: 67px;
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #C4C4C4;
+  background-color: #0D6EFD;
+  color: #fff;
+}
+
+.inbox_small{
+  display: block;
+  font-size: 12px;
+  font-family: Open Sans,sans-serif;
+  font-weight: 400;
+  line-height: 21px;
+  color: #fff;
+  margin-top: 12px;
+}
+
+.footer{
+  width: 100%;
+  min-height: 370px;
+  border-top: 1px solid #C4C4C4;
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+}
+
+.footer_links{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+
 }
 
-.App-link {
-  color: #61dafb;
+.footer_link{
+  max-width: 154px;
+  width: 100%;
+  margin-right: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer_input{
+  height: 48px;
+  max-width: 354px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #C4C4C4;
+  text-indent: 20px;
+}
+
+.footer_btn{
+  max-width: 67px;
+  width: 100%;
+  height: 48px;
+  background-color: #0D6EFD;
+  color: #fff;
+  border: 1px solid #C4C4C4;
+}
+
+.footer_link>b{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #212121;
+
+}
+
+.footer_link li{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #807E7E;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.footer_link>p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #212121;
+}
+
+.ftr{
+  max-width: 354px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 24px 0;
+  margin-bottom: 50px;
+}
+
+.inp{
+  display: flex;
+}
+
+.end{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 24px;
+  border-top: 1px solid #C4C4C4;
+}
+
+.end_links{
+  display: flex;
+  gap: 0 40px;
+}
+
+a{
+  transition: 0.3s;
+}
+
+a:hover{
+  background-color: #fff;
+  color: #0D6EFD;
+  border: 1px solid #0D6EFD;
+}
+
+a:active{
+  transform: scale(0.9);
+}
+
+button{
+  transition: 0.3s;
+}
+
+button:hover{
+  background-color: #fff;
+  color: #0D6EFD;
+}
+
+button:active{
+  transform: scale(0.9);
 }
